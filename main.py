@@ -1,9 +1,13 @@
-from Classes import Pcb as Pcb
-from Classes import State as State
+from Pcb import Pcb as Pcb
+from StateEnum import State as State
 
+# processes_dict = {}
 
-print(Pcb.getMembersList())
+## TO DO:
+## Print menu
+## PID is the key in processes_dict
+## Utilities to check inputs
+## 
 
-# list_processes = []
 # while True:
 #     user_input = input("Enter your choice")

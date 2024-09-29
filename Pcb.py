@@ -2,7 +2,7 @@ from StateEnum import State
 import os
 
 class Pcb():
-    def __init__(self, state: State, pid: int, program_counter: int, registers: list[bool], memory_limits: tuple, list_of_open_files: list ) -> None:
+    def __init__(self, state: State, pid: int, program_counter: int, registers: list[int], memory_limits: tuple, list_of_open_files: list):
         self._state = state
         self._pid = pid
         self._program_counter = program_counter
@@ -24,7 +24,7 @@ class Pcb():
         self._program_counter = program_counter
 
         
-    def setRegisters(self, registers: list[bool]) -> None:
+    def setRegisters(self, registers: list[int]) -> None:
         self._registers = registers
 
         
@@ -49,7 +49,7 @@ class Pcb():
         return self._program_counter
     
         
-    def getRegisters(self) -> list[bool]:
+    def getRegisters(self) -> list[int]:
         return self._registers
     
         
@@ -69,6 +69,6 @@ class Pcb():
 
 
 if __name__ == "__main__":
-    test_process = Pcb(State.READY, 1, 12, [True, False], (203, 556), [])
+    test_process = Pcb(State.READY, 1, 12, [10,5], (203, 556), [])
     print(test_process)
 
